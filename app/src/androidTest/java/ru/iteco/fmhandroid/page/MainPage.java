@@ -28,7 +28,6 @@ public class MainPage {
     public void goToMissionPage() {
         missionButton.perform(click());
     }
-    
     public void goToAllNewsButton() {
         allNewsButton.perform(click());
     }

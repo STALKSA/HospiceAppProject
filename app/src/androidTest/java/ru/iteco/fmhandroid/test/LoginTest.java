@@ -1,6 +1,5 @@
 package ru.iteco.fmhandroid.test;
 
-
 import static ru.iteco.fmhandroid.test.AuthUtils.LOGIN;
 import static ru.iteco.fmhandroid.test.AuthUtils.logIn;
 import static ru.iteco.fmhandroid.test.AuthUtils.logOut;
@@ -26,7 +25,6 @@ public class LoginTest extends BasicTest {
     public void init() {
         logOut();
     }
-
     public static String EMPTY_STRING = "";
     public static String INCORRECT_LOGIN = "loggggin";
     public static String INCORRECT_PASSWORD = "passwoed";

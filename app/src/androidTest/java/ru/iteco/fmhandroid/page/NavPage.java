@@ -12,9 +12,9 @@ import ru.iteco.fmhandroid.R;
 
 public class NavPage {
     ViewInteraction toastButton = onView(withId(R.id.main_menu_image_button));
-    ViewInteraction newsPageButton = onView(withText("News"));
-    ViewInteraction mainPageButton = onView(withText("Main"));
-    ViewInteraction aboutPageButton = onView(withText("About"));
+    ViewInteraction newsPageButton = onView(withText("Новости"));
+    ViewInteraction mainPageButton = onView(withText("Главная"));
+    ViewInteraction aboutPageButton = onView(withText("О приложении"));
 
     public void goToNewsPage() {
         toastButton.check(matches(isDisplayed()));
