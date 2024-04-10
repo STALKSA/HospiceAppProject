@@ -38,7 +38,7 @@ public class AboutTest extends BasicTest {
     }
     @Test
     @Story("Переход на экран О Приложении")
-    @Description("Переход на экран О Приложении с экрана News")
+    @Description("Переход на экран О Приложении с экрана Новости")
     public void goToAboutPageFromNewsTest() {
         Allure.step("Перейти на экран News");
         NavPage navPage = new NavPage();
