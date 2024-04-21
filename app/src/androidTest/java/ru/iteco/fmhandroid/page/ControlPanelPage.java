@@ -7,8 +7,10 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static ru.iteco.fmhandroid.test.TestUtils.waitDisplayed;
+import static ru.iteco.fmhandroid.util.TestUtils.waitDisplayed;
+
 import androidx.test.espresso.ViewInteraction;
+
 import ru.iteco.fmhandroid.R;
 
 public class ControlPanelPage {

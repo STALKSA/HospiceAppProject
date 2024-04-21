@@ -11,9 +11,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
-import static ru.iteco.fmhandroid.test.TestUtils.waitDisplayed;
+import static ru.iteco.fmhandroid.util.TestUtils.waitDisplayed;
+
 import android.widget.EditText;
+
 import androidx.test.espresso.ViewInteraction;
+
 import ru.iteco.fmhandroid.R;
 
 public class LoginPage {
@@ -31,7 +34,9 @@ public class LoginPage {
                     isAssignableFrom(EditText.class)
             )
     );
+
     ViewInteraction signInButton = onView(withId(R.id.enter_button));
+
     public void validatePageLoaded() {
         loginInputText.check(matches(isDisplayed()));
         passwordInputText.check(matches(isDisplayed()));
@@ -60,4 +65,6 @@ public class LoginPage {
         } catch (Exception e){
         }
     }
+
 }
+

@@ -1,55 +1,71 @@
 package ru.iteco.fmhandroid.test;
 
-import static ru.iteco.fmhandroid.test.AuthUtils.goToMainPage;
+import static ru.iteco.fmhandroid.util.AuthUtils.goToMainPage;
+
 import androidx.test.espresso.Espresso;
+
 import org.junit.Before;
 import org.junit.Test;
+
 import io.qameta.allure.kotlin.Allure;
 import io.qameta.allure.kotlin.Description;
 import io.qameta.allure.kotlin.Epic;
 import io.qameta.allure.kotlin.Feature;
 import io.qameta.allure.kotlin.Story;
-import ru.iteco.fmhandroid.BasicTest;
+import ru.iteco.fmhandroid.BaseTest;
 import ru.iteco.fmhandroid.page.AboutPage;
 import ru.iteco.fmhandroid.page.NavPage;
+import io.qameta.allure.Step;
 
 @Epic("Внутренние страницы приложения")
 @Feature("О приложении")
-public class AboutTest extends BasicTest {
+public class AboutTest extends BaseTest {
 
     @Before
     public void login() {
         goToMainPage();
     }
+
     @Test
     @Story("Переход на экран О Приложении")
     @Description("Переход на экран О Приложении с экрана Main")
     public void goToAboutPageFromMainTest() {
-        Allure.step("Вызвать меню");
+        goToAboutPageFromMainTestSteps();
+    }
+
+    @Step("Вызвать меню и перейти на страницу О приложении")
+    public void goToAboutPageFromMainTestSteps() {
         NavPage navPage = new NavPage();
-        Allure.step("Перейти на страницу О приложении");
         navPage.goToAboutPage();
 
         AboutPage aboutPage = new AboutPage();
         aboutPage.waitUntilPageLoaded();
-        aboutPage.validatePageLoaded();
+        aboutPage.checkVersionTitleDisplayed();
+        aboutPage.checkPrivacyTitleDisplayed();
+        aboutPage.checkTermsOfUseTitleDisplayed();
 
         Espresso.pressBack();
     }
+
     @Test
     @Story("Переход на экран О Приложении")
-    @Description("Переход на экран О Приложении с экрана Новости")
+    @Description("Переход на экран О Приложении с экрана News")
     public void goToAboutPageFromNewsTest() {
-        Allure.step("Перейти на экран News");
+        goToAboutPageFromNewsTestSteps();
+    }
+
+    @Step("Перейти на экран News и перейти на страницу О приложении")
+    public void goToAboutPageFromNewsTestSteps() {
         NavPage navPage = new NavPage();
         navPage.goToNewsPage();
 
-        Allure.step("Перейти на страницу О приложении");
         navPage.goToAboutPage();
 
         AboutPage aboutPage = new AboutPage();
         aboutPage.waitUntilPageLoaded();
-        aboutPage.validatePageLoaded();
+        aboutPage.checkVersionTitleDisplayed();
+        aboutPage.checkPrivacyTitleDisplayed();
+        aboutPage.checkTermsOfUseTitleDisplayed();
 
         Espresso.pressBack();
     }

@@ -8,7 +8,6 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.firebase.crashlytics'
     id 'io.qameta.allure' version '2.11.2'
-
 }
 
 android {
@@ -46,10 +45,10 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "BASE_URL", '"https://test.vhospice.org/api/fmh/"'
+            buildConfigField "String", "BASE_URL", '"https://students.netoservices.ru/qamid-diplom-backend/"'
         }
         debug {
-            buildConfigField "String", "BASE_URL", '"https://test.vhospice.org/api/fmh/"'
+            buildConfigField "String", "BASE_URL", '"https://students.netoservices.ru/qamid-diplom-backend/"'
         }
     }
 }
@@ -88,8 +87,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     //noinspection LifecycleAnnotationProcessorWithJava8
     kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -109,11 +106,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.4.0'
     androidTestImplementation 'androidx.test:rules:1.6.0-alpha01'
     androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.services:teststorage:1.5.0'
     androidTestUtil 'androidx.test:orchestrator:1.4.0'
 
     androidTestImplementation "io.qameta.allure:allure-kotlin-model:2.4.0"
     androidTestImplementation "io.qameta.allure:allure-kotlin-commons:2.4.0"
     androidTestImplementation "io.qameta.allure:allure-kotlin-junit4:2.4.0"
     androidTestImplementation "io.qameta.allure:allure-kotlin-android:2.4.0"
-
 }

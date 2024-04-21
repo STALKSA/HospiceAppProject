@@ -5,8 +5,10 @@ import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static ru.iteco.fmhandroid.test.TestUtils.waitDisplayed;
+import static ru.iteco.fmhandroid.util.TestUtils.waitDisplayed;
+
 import androidx.test.espresso.ViewInteraction;
+
 import ru.iteco.fmhandroid.R;
 
 public class MissionPage {
@@ -22,3 +24,4 @@ public class MissionPage {
     }
 
 }
+

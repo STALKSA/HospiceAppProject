@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.test;
+package ru.iteco.fmhandroid.util;
 
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
@@ -17,6 +17,7 @@ import org.hamcrest.Matcher;
 import java.util.concurrent.TimeoutException;
 
 public class TestUtils {
+
     public static ViewAction waitDisplayed(final int viewId, final long millis) {
         return new ViewAction() {
             @Override
@@ -48,6 +49,7 @@ public class TestUtils {
                 }
                 while (System.currentTimeMillis() < endTime);
 
+                // timeout happens
                 throw new PerformException.Builder()
                         .withActionDescription(this.getDescription())
                         .withViewDescription(HumanReadables.describe(view))

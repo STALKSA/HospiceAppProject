@@ -1,6 +1,6 @@
 package ru.iteco.fmhandroid.test;
 
-import static ru.iteco.fmhandroid.test.AuthUtils.goToMainPage;
+import static ru.iteco.fmhandroid.util.AuthUtils.goToMainPage;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -10,13 +10,13 @@ import io.qameta.allure.kotlin.Description;
 import io.qameta.allure.kotlin.Epic;
 import io.qameta.allure.kotlin.Feature;
 import io.qameta.allure.kotlin.Story;
-import ru.iteco.fmhandroid.BasicTest;
+import ru.iteco.fmhandroid.BaseTest;
 import ru.iteco.fmhandroid.page.MainPage;
 import ru.iteco.fmhandroid.page.MissionPage;
 
 @Epic("Внутренние страницы приложения")
 @Feature("Цитаты")
-public class MissionTest extends BasicTest {
+public class MissionTest extends BaseTest {
     @Before
     public void login() {
         goToMainPage();

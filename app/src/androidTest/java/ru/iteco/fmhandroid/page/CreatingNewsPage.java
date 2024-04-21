@@ -12,9 +12,12 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
-import static ru.iteco.fmhandroid.test.TestUtils.waitDisplayed;
+import static ru.iteco.fmhandroid.util.TestUtils.waitDisplayed;
+
 import android.widget.EditText;
+
 import androidx.test.espresso.ViewInteraction;
+
 import ru.iteco.fmhandroid.R;
 
 public class CreatingNewsPage {
@@ -29,7 +32,9 @@ public class CreatingNewsPage {
                     isAssignableFrom(EditText.class)
             )
     );
-     ViewInteraction addNewsButton = onView(withId(R.id.save_button));
+    ViewInteraction addNewsButton = onView(withId(R.id.save_button));
+
+
 
     public void validatePageLoaded() {
         addNewsTitle.check(matches(isDisplayed()));
@@ -79,4 +84,5 @@ public class CreatingNewsPage {
                 .perform(click());
         onView(isRoot()).perform(waitDisplayed(R.id.news_item_publish_time_text_input_edit_text, 6000));
     }
+
 }
