@@ -52,6 +52,6 @@
 
 
 ## Результаты запуска авто-тестов
-[чек-литы, тст-кейсы, репорт по авто-тестам](https://github.com/STALKSA/HospiceAppProject/tree/main/docs)
+[чек-лиcты, тест-кейсы, репорт по авто-тестам](https://github.com/STALKSA/HospiceAppProject/tree/main/docs)
 
     
