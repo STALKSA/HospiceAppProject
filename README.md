@@ -54,4 +54,3 @@
 [чек-лиcты, тест-кейсы, репорт по авто-тестам](https://github.com/STALKSA/HospiceAppProject/tree/main/docs)
 
 
-    
